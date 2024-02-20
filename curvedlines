@@ -30,11 +30,11 @@ def process_image_for_curves(img, roi_vertices):
 cap = cv2.VideoCapture(0)
 
 # Define ROI vertices relative to the camera resolution
-# Adjust these values if your resolution is different
+
 ret, frame = cap.read()
 rows, cols, _ = frame.shape
-roi_width = cols * 0.6 # 60% of the frame width
-roi_height = rows * 0.6 # 60% of the frame height
+roi_width = cols * 0.6 
+roi_height = rows * 0.6 
 top_left_vertex = (int((cols - roi_width) / 2), int((rows - roi_height) / 2))
 bottom_right_vertex = (int((cols + roi_width) / 2), int((rows + roi_height) / 2))
 
